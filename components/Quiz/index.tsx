@@ -49,7 +49,7 @@ const Quiz = () => {
   }, [currentQuestion]);
 
   return (
-    <div className=" w-full flex flex-col justify-center items-center px-[400px]">
+    <div className=" w-full flex flex-col justify-center items-center lg:px-[400px]">
       {!!getCurrentQuestion && (
         <>
           <h1 className="font-bold text-2xl mb-12">
