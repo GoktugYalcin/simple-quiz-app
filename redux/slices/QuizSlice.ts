@@ -1,11 +1,8 @@
 import { createAsyncThunk, createSlice, current } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import {
-  AnswersProps,
-  QuestionProps,
-  QuizSliceProps,
-} from "@/types/QuizSliceProps";
+import { QuestionProps, QuizSliceProps } from "@/types/QuizSliceProps";
+import { AnswersProps } from "@/types/AnswerProps";
 
 const initialState: QuizSliceProps = {
   questions: [],
