@@ -11,8 +11,7 @@ const initialState: QuizSliceProps = {
 };
 
 export const fetchQuestions = createAsyncThunk("quiz/fetch", async () => {
-  const url = "https://jsonplaceholder.typicode.com/posts";
-  const res = await axios.get(url);
+  const res = await axios.get(process.env.NEXT_PUBLIC_API_URL!);
   return res.data.slice(0, 10).map((i: any) => ({
     ...i,
     body: splitStringToPieces(i.body),

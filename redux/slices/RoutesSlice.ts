@@ -8,6 +8,7 @@ const initialState: RouteStateProps = {
     type: "intro",
   },
   loading: true,
+  error: false,
 };
 
 const decideNextStep = (current: string) => {
@@ -45,6 +46,11 @@ export const routeSlice = createSlice({
         pageNumber: 0,
       };
       state.loading = false;
+      state.error = false;
+    });
+    builder.addCase(fetchQuestions.rejected, (state) => {
+      state.loading = false;
+      state.error = true;
     });
   },
 });

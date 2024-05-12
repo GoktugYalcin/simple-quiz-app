@@ -7,4 +7,5 @@ export type RouteProps = {
 export interface RouteStateProps {
   currentRoute: RouteProps;
   loading: boolean;
+  error: boolean;
 }

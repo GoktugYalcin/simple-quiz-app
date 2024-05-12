@@ -19,12 +19,6 @@ const Loading = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-8 select-none">
-      <Lottie
-        animationData={LoadingAnim}
-        style={{
-          width: 300,
-        }}
-      />
       <span className="font-bold">Loading...</span>
     </div>
   );
