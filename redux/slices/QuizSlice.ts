@@ -1,22 +1,11 @@
 import { createAsyncThunk, createSlice, current } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import axios, { AxiosResponse } from "axios";
-
-export type QuestionProps = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string[];
-};
-
-export type AnswersProps = {
-  [key: number]: string;
-};
-export interface QuizSliceProps {
-  questions: QuestionProps[];
-  answers: AnswersProps[];
-  currentQuestion: number;
-}
+import axios from "axios";
+import {
+  AnswersProps,
+  QuestionProps,
+  QuizSliceProps,
+} from "@/types/QuizSliceProps";
 
 const initialState: QuizSliceProps = {
   questions: [],

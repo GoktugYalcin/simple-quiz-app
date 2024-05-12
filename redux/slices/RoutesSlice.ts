@@ -1,17 +1,7 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { fetchQuestions } from "@/redux/slices/QuizSlice";
-
-export type RouteType = "intro" | "quiz" | "end" | null;
-
-export type RouteProps = {
-  type: RouteType;
-  pageNumber?: number;
-};
-export interface RouteStateProps {
-  currentRoute: RouteProps;
-  loading: boolean;
-}
+import { RouteStateProps, RouteType } from "@/types/RouteSliceProps";
 
 const initialState: RouteStateProps = {
   currentRoute: {

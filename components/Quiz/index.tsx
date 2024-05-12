@@ -1,15 +1,12 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/redux/store";
-import {
-  AnswersProps,
-  nextQuestion,
-  pushAnswer,
-} from "@/redux/slices/QuizSlice";
+import { nextQuestion, pushAnswer } from "@/redux/slices/QuizSlice";
 import clsx from "clsx";
 import { useCountDown } from "ahooks";
 import { iterateRoute } from "@/redux/slices/RoutesSlice";
 import CountDownView from "@/components/Quiz/CountDownView";
+import { AnswersProps } from "@/types/AnswerProps";
 
 const Quiz = () => {
   const dispatch = useDispatch<AppDispatch>();

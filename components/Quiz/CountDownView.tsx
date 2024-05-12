@@ -1,8 +1,6 @@
 import React from "react";
+import { CountDownViewProps } from "@/types/QuizProps";
 
-export type CountDownViewProps = {
-  countdown: number;
-};
 const CountDownView: React.FC<CountDownViewProps> = ({ countdown }) => {
   return (
     countdown > 0 && (
